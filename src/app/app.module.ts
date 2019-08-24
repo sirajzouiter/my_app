@@ -8,8 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { RegisterComponent } from './register/register.component';
 import { ReportingComponent } from './reporting/reporting.component';
-import { ModifyComponentComponent } from './modify-component/modify-component.component';
-import { AccountComponentComponent } from './account-component/account-component.component';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +17,9 @@ import { AccountComponentComponent } from './account-component/account-component
     HomeComponent,
     AccountListComponent,
     RegisterComponent,
-    ReportingComponent,
-    ModifyComponentComponent,
-    AccountComponentComponent
+    ReportingComponent
+    
+   
   ],
   imports: [
     BrowserModule,

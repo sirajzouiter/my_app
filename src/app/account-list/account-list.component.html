@@ -1,37 +1,75 @@
 
-<p></p>
-<!--nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-   
-    <a class="navbar-brand" href="#">Consultation des comptes</a>
-    
-</nav-->
 
+
+
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-text"style="font-size:20px ;color:DodgerBlue">
+        Choose an account
+    </span>
+    <!--div class="nav-item">
+        <a class="nav-link" href="#"></a>
+    </div-->
+   
+    
+    <div class="nav-item">
+        <a class="nav-link" href="#"><button  class="btn" type="button" style="background-color:rgb(153, 199, 229);margin-left:auto;margin-right:auto;display:block;margin-top:3%;margin-bottom:0%"
+            (click)="add()"
+           >Add new Account</button>
+            </a>
+    </div>
+  </nav>
+
+
+
+
+
+    
+   <!--button  class="btn" type="button" style="background-color:rgb(153, 199, 229);margin-left:auto;margin-right:auto;display:block;margin-top:3%;margin-bottom:0%"
+     (click)="add()"
+    >Add new Account</button>
+    
+    <div class="row">           </div-->
+   
 
 <div class="container">
-        <table class="table table-striped table-inverse table-responsive">
-            <thead class="thead-inverse">
+        <!--table class="table table-striped table-inverse table-responsive"-->
+            <table class="table table-bordered">
+            <thead class="table-info" >
             
             
-                <tr bgcolor= "#c1d1d7">
+                <tr >
                     <th></th>
-                    <th >Compte</th>
-                    <th >intitulé</th>
+                    <th >id</th>
+                    <th >label</th>
                     <th > Debit</th>
                     <th >Credit </th>
-                    <th >*****</th>
+                    <th >Edit</th>
+                    <th >remove</th>
                 </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor="let _account of accountlist;let i=index">
                         <td scope="row" width=100 ><button > <img src ="https://media3.picsearch.com/is?uD5OiaWXSAIQJ84XrhLPh3OJPnri9lYrLJSyhWMbAys&height=204" width="30" height="30"></button></td>
-                        <td width=200 >65415</td>
-                        <td  >materiels informatique</td>
-                        <td  width=200 >65416</td>
-                        <td width=200  >capital</td>
-                        <td  width=200  > <button> <img src="https://image.flaticon.com/icons/png/512/54/54901.png" width="20" height="20"></button> <button> <img src="https://image.flaticon.com/icons/png/512/70/70287.png" width="20" height="20"></button> </td>
+                        <td width=200 >{{_account?.id}}</td>
+                        <td  >{{_account.label}}</td>
+                        <td  width=200 >{{_account.debit}}</td>
+                        <td width=200  >{{_account.credit}}</td>
+                        <td><button class="btn btn-secondary"(click)="edit(i)"><img src="https://image.flaticon.com/icons/png/512/54/54901.png" width="15" height="15"></button> </td>
+                        <td>
+                            <button 
+                                class="btn btn-warning"
+                                (click)="deleteAccount(i)"
+                            > <img src="https://image.flaticon.com/icons/png/512/70/70287.png" width="15" height="15"></button>
+                            </td>
+                        
+                        
+                        
+                        
+                        
+                        <!--td  width=200  > <button> <img src="https://image.flaticon.com/icons/png/512/54/54901.png" width="20" height="20"></button> <button> <img src="https://image.flaticon.com/icons/png/512/70/70287.png" width="20" height="20"></button> </td>
     
                     </tr>
-                    <tr>
+                    <!-tr>
                         <td scope="row"><button > <img src ="https://media3.picsearch.com/is?uD5OiaWXSAIQJ84XrhLPh3OJPnri9lYrLJSyhWMbAys&height=204" width="30" height="30"></button></td>
                         <td >65416</td>
                         <td >capital</td>
@@ -60,7 +98,12 @@
                         <td><button> <img src="https://image.flaticon.com/icons/png/512/54/54901.png" width="20" height="20"></button>  <button> <img src="https://image.flaticon.com/icons/png/512/70/70287.png" width="20" height="20"></button> </td>
                         
                         
-                    </tr>
+                    </tr-->
                 </tbody>
         </table>
+
+   
+
     </div>
+    
+    
